@@ -1,6 +1,10 @@
 #!/bin/bash
-cd /root/${REPO_DIR}/
-git pull
+apt-get update
+apt-get upgrade -y
+apt-get install -y --no-install-recommends git openssh-server 
+rm -rf /var/lib/apt/lists/*
+cd /root 
+git clone -b release-stable ${REPO_URL} 
 chmod -R +x /root/${REPO_DIR}/install_scripts/
 /root/${REPO_DIR}/install_scripts/mkuser.sh
 /root/${REPO_DIR}/install_scripts/mkjail.sh
