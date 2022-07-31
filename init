@@ -2,8 +2,12 @@
 
 echo "Setting up Repository -----------------------------------------------------"
 
-if [ -f /root/${REPO_DIR} ]; then
+if [ -d /root/${REPO_DIR} ]; then
+    
+    echo "Repository exists checking if upto date------------------------------------------"
+
     cd /root/${REPO_DIR}
+    
     if [git pull | grep -q "Already"]; then
             echo "Repository is already up to date"
        else
@@ -12,7 +16,7 @@ if [ -f /root/${REPO_DIR} ]; then
 else
     cd /root 
     git clone -b release-stable ${REPO_URL}
-    
+
     /root/sshd_setup 
 fi
 
