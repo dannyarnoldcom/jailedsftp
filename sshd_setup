@@ -1,0 +1,6 @@
+#!/bin/bash
+
+chmod -R +x /root/${REPO_DIR}/install_scripts/
+
+/root/${REPO_DIR}/install_scripts/mkuser.sh
+/root/${REPO_DIR}/install_scripts/mkjail.sh

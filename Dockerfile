@@ -14,7 +14,9 @@ ENV REPO_URL=https://github.com/dannyarnoldcom/jailedsftp.git
 
 COPY init .
 
-RUN chmod +x init
+COPY sshd_setup .
+
+RUN chmod +x init && chmod +x sshd_setup
 
 EXPOSE 22
 

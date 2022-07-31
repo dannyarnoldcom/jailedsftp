@@ -1,9 +1,22 @@
 #!/bin/bash
-cd /root 
-git clone -b release-stable ${REPO_URL} 
-chmod -R +x /root/${REPO_DIR}/install_scripts/
-/root/${REPO_DIR}/install_scripts/mkuser.sh
-/root/${REPO_DIR}/install_scripts/mkjail.sh
+
+echo "Setting up Repository -----------------------------------------------------"
+
+if [ -f /root/${REPO_DIR} ]; then
+    cd /root/${REPO_DIR}
+    if [git pull | grep -q "Already"]; then
+            echo "Repository is already up to date"
+       else
+            exec /root/sshd_setup
+    fi
+else
+    cd /root 
+    git clone -b release-stable ${REPO_URL}
+    exec /root/sshd_setup 
+fi
+
+echo "Starting sshd  -----------------------------------------------------"
 mkdir -p /run/sshd && chmod 755 /run/sshd
 /usr/sbin/sshd &
+
 /usr/bin/tail -f
