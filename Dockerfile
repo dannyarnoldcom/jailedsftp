@@ -4,6 +4,10 @@ USER root
 
 WORKDIR /root/
 
+RUN apt-get update && apt-get upgrade -y && \ 
+    apt-get install -y --no-install-recommends git openssh-server && \
+    rm -rf /var/lib/apt/lists/*
+
 ENV REPO_DIR=jailedsftp
 
 ENV REPO_URL=https://github.com/dannyarnoldcom/jailedsftp.git
