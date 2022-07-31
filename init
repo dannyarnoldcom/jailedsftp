@@ -8,7 +8,7 @@ if [ -d /root/${REPO_DIR} ]; then
 
     cd /root/${REPO_DIR}
     
-    if [git pull | grep -q "Already"]; then
+    if git pull | grep -q "Already"; then
             echo "Repository is already up to date"
        else
             /root/sshd_setup
