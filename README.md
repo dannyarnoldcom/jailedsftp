@@ -13,6 +13,6 @@
  - BANNER={local_filename_of_banner_text}
 ### Repository
 
-<https://github.com/pinnet/jailedsftp.git>
+<https://github.com/dannyarnoldcom/jailedsftp.git>
 
 License MIT
