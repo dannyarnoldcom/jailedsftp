@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /root/${REPO_DIR}/
+git pull
+chmod -R +x /root/${REPO_DIR}/install_scripts/
+/root/${REPO_DIR}/install_scripts/mkuser.sh
+/root/${REPO_DIR}/install_scripts/mkjail.sh
+mkdir -p /run/sshd && chmod 755 /run/sshd
+/usr/sbin/sshd &
+/usr/bin/tail -f
