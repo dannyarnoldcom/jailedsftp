@@ -1,7 +1,7 @@
 #!/bin/bash
 
 JAILED_USER=${SSH_USER:=sshjail}
-SSH_SHELL${SSH_SHELL:=/usr/bin/nologin}
+SSH_SHELL=${SSH_SHELL:=/usr/bin/nologin}
 
 groupadd jailed
 adduser --disabled-password --shell ${SSH_SHELL} --ingroup jailed --gecos "" $JAILED_USER
