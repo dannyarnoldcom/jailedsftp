@@ -4,7 +4,7 @@ echo "Setting up Repository ----------------------------------------------------
 
 if [ -d /root/${REPO_DIR} ]; then
     
-    echo "Repository exists, checking if up to date------------------------------------------"
+    echo "Repository exists, checking if up to date"
 
     cd /root/${REPO_DIR}
     
