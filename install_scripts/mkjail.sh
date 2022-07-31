@@ -14,7 +14,7 @@ cp /etc/hosts .
 cd /var/jail/usr/bin
 cp /bin/ls .
 cp /bin/bash .
-ln -s /var/jail/dev/null nologin
+ln -s /dev/null nologin
 
 /root/${REPO_DIR}/install_scripts/l2chroot.sh ls
 /root/${REPO_DIR}/install_scripts/l2chroot.sh bash
