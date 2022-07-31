@@ -10,6 +10,8 @@ ENV REPO_URL=https://github.com/dannyarnoldcom/jailedsftp.git
 
 COPY init .
 
+RUN chmod +x init
+
 EXPOSE 22
 
 ENTRYPOINT [ "/bin/sh", "-c", "exec /root/init " ]
