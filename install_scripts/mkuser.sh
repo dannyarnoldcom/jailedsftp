@@ -32,7 +32,9 @@ echo "UsePam yes" >> /etc/ssh/sshd_config
 echo 'PermitRootLogin no' >> /etc/ssh/sshd_config
 echo 'PermitEmptyPasswords no' >> /etc/ssh/sshd_config
 echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config
+echo 'RSAAuthentication yes' >> /etc/ssh/sshd_config
 echo 'PubkeyAuthentication yes' >> /etc/ssh/sshd_config
+echo 'AuthorizedKeysFile .ssh/authorized_keys' >> /etc/ssh/sshd_config
 echo "LoginGraceTime 2m" >> /etc/ssh/sshd_config
 echo "MaxAuthTries 3" >> /etc/ssh/sshd_config
 echo "MaxSessions 2" >> /etc/ssh/sshd_config
