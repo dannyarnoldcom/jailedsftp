@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Starting sshd  -----------------------------------------------------"
+echo "Setting up sshd  -----------------------------------------------------"
 chmod -R +x /root/${REPO_DIR}/install_scripts/
 /root/${REPO_DIR}/install_scripts/mkuser.sh
 /root/${REPO_DIR}/install_scripts/mkjail.sh
