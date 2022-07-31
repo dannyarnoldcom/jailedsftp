@@ -1,11 +1,20 @@
-*************************************************************************
-*      IT IS AN OFFENSE TO CONTINUE WITHOUT PROPER AUTHORIZATION.       *
-*      This system is restricted to authorized users. Individuals       *
-*      who attempt unauthorized access will be prosecuted.              *
-*      If you are unauthorized, terminate access now.                   *
-*************************************************************************
 
-                    ***   Access Denied  ***
 
-Your access information has been logged and will be sent to the authories
-.........................................................................
+
+
+
+**************************************************************************
+*       IT IS AN OFFENSE TO CONTINUE WITHOUT PROPER AUTHORIZATION.       *
+*       This system is restricted to authorized users. Individuals       *
+*       who attempt unauthorized access will be prosecuted.              *
+*       If you are unauthorized, terminate access now.                   *
+**************************************************************************
+
+                      ***   Access Denied  ***
+
+Your access information has been logged and will be sent to the authorities
+...........................................................................
+
+
+
+
