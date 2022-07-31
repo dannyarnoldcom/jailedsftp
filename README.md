@@ -7,7 +7,7 @@ docker run -p 8022:22 -v [path-to-ftpfiles]:/var/jail/home/${SSHUSER} dannyarnol
 
  - SSH_USER=sshjail
  - SSH_PASS=sshjail
- - AUTH_KEY=[authorized key (overrides password)]
+ - AUTH_KEY=[authorized key]
  - SSH_SHELL=/usr/bin/nologin
 ### Repository
 
