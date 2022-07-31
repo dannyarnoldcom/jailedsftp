@@ -12,6 +12,7 @@ if [ -f /root/${REPO_DIR} ]; then
 else
     cd /root 
     git clone -b release-stable ${REPO_URL}
+    
     /root/sshd_setup 
 fi
 
