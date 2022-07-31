@@ -2,7 +2,7 @@
 
 ### Usage
 
-    docker run -p 8022:22 -v [path-to-ftpfiles]:/var/jail/home/${SSHUSER} dannyarnoldcom/jailedsftp:latest
+    docker run -p 8022:22 -v [path-to-ftpfiles]:/var/jail/home/{SSH_USER} dannyarnoldcom/jailedsftp:latest
 
 ### Environment overrides
 
