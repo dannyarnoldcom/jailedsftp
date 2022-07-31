@@ -10,6 +10,7 @@
  - SSH_PASS=sshjail
  - AUTH_KEY=[authorized key]
  - SSH_SHELL=/usr/bin/nologin
+ - BANNER={local_filename_of_banner_text}
 ### Repository
 
 <https://github.com/pinnet/jailedsftp.git>
