@@ -8,6 +8,8 @@
 
  - SSH_USER=sshjail
  - SSH_PASS=sshjail
+ - UID=1000
+ - GUID=1000
  - AUTH_KEY=[authorized key]
  - SSH_SHELL=/usr/bin/nologin
  - BANNER={local_filename_of_banner_text}
