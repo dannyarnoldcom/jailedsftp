@@ -17,6 +17,7 @@ if [ -d /root/${REPO_DIR} ]; then
     fi
 else
     cd /root 
+    echo "cloning ${BRANCH} into ${REPO_DIR}"
     git clone -b ${BRANCH} ${REPO_URL}
 
     /root/sshd_setup 
