@@ -13,6 +13,7 @@
  - AUTH_KEY=[authorized key]
  - SSH_SHELL=/usr/bin/nologin
  - BANNER={local_filename_of_banner_text}
+ - BUILD=release-stable
 ### Repository
 
 <https://github.com/dannyarnoldcom/jailedsftp.git>

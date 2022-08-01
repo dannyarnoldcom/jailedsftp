@@ -3,12 +3,12 @@
 JAILED_USER=${SSH_USER:=sshjail}
 SSH_SHELL=${SSH_SHELL:=/usr/bin/nologin}
 UID=${UID:=1000}
-GID=${GID:=1000}
+GID=${GID:=${UID}}
 
-if [ "$UID" -lt "1000" ]; then
+if [ "$UID" -lt "500" ]; then
     UID=1000
 fi
-if [ "$GID" -lt "1000" ]; then
+if [ "$GID" -lt "500" ]; then
     GID=1000
 fi
 
