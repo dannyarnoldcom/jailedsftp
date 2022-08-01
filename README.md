@@ -9,12 +9,12 @@
  - SSH_USER=sshjail
  - SSH_PASS=sshjail
  - UID=1000
- - GUID=1000
+ - GUID=${UID}
  - AUTH_KEY=[authorized key]
  - SSH_SHELL=/usr/bin/nologin
- - BANNER={local_filename_of_banner_text}
- - BUILD=release-stable
-### Repository
+ - BANNER=none
+ - BRANCH=release-stable
+ ### Repository
 
 <https://github.com/dannyarnoldcom/jailedsftp.git>
 

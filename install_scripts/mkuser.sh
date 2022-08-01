@@ -6,10 +6,10 @@ UID=${UID:=1000}
 GID=${GID:=${UID}}
 
 if [ "$UID" -lt "500" ]; then
-    UID=1000
+    UID=500
 fi
 if [ "$GID" -lt "500" ]; then
-    GID=1000
+    GID=500
 fi
 
 groupadd --gid ${GID} jailed

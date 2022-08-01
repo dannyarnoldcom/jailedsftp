@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUILD=${BUILD:=release-stable}
+BRANCH=${BRANCH:=release-stable}
 
 echo "Setting up Repository -----------------------------------------------------"
 
@@ -17,7 +17,7 @@ if [ -d /root/${REPO_DIR} ]; then
     fi
 else
     cd /root 
-    git clone -b ${BUILD}  ${REPO_URL}
+    git clone -b ${BRANCH}  ${REPO_URL}
 
     /root/sshd_setup 
 fi
