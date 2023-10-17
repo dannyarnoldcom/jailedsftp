@@ -2,18 +2,18 @@
 
 JAILED_USER=${SSH_USER:=sshjail}
 SSH_SHELL=${SSH_SHELL:=/usr/bin/nologin}
-UID=${UID:=1000}
-GID=${GID:=${UID}}
+MUID=${MUID:=1000}
+MGID=${MGID:=${MUID}}
 
-if [ "$UID" -lt "500" ]; then
-    UID=500
+if [ "$MUID" -lt "500" ]; then
+    MUID=500
 fi
-if [ "$GID" -lt "500" ]; then
-    GID=500
+if [ "$MGID" -lt "500" ]; then
+    MGID=500
 fi
 
-groupadd --gid ${GID} jailed
-adduser --uid ${UID} --disabled-password --shell ${SSH_SHELL} --ingroup jailed --gecos "" $JAILED_USER
+groupadd --gid ${MGID} jailed
+adduser --uid ${MUID} --disabled-password --shell ${SSH_SHELL} --ingroup jailed --gecos "" $JAILED_USER
 
 mkdir -p /var/jail/home/$JAILED_USER
 chown -R $JAILED_USER:jailed /var/jail/home/$JAILED_USER
