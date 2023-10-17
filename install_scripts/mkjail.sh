@@ -23,6 +23,6 @@ echo 'Match Group jailed
     PasswordAuthentication no 
     ChrootDirectory /var/jail/  
     X11Forwarding no 
-    AllowTcpForwarding no ' >> /etc/ssh/sshd_config
+    AllowTcpForwarding no ' >> /etc/ssh/sshd_config.d/jail.conf
 
 

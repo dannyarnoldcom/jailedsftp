@@ -15,7 +15,7 @@ mkdir /home/$JAILED_USER/.ssh && chown $JAILED_USER:$JAILED_GROUP /home/$JAILED_
 touch /home/$JAILED_USER/.ssh/authorized_keys
 chown $JAILED_USER:$JAILED_GROUP /home/$JAILED_USER/.ssh/authorized_keys && chmod 600 /home/$JAILED_USER/.ssh/authorized_keys
 
-echo 'Match Group ' $JAILED_GROUP      >> /etc/ssh/sshd_config
-echo '    PasswordAuthentication no'  >> /etc/ssh/sshd_config
-echo '    ChrootDirectory /var/jail/' >> /etc/ssh/sshd_config
-echo '    AllowTcpForwarding yes'     >> /etc/ssh/sshd_config
+echo 'Match Group ' $JAILED_GROUP '
+        PasswordAuthentication no 
+        ChrootDirectory /var/jail/
+        AllowTcpForwarding yes'     >> /etc/ssh/sshd_config.d/tunnel_jail.conf
